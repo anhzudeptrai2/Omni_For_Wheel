@@ -1,5 +1,5 @@
-#ifndef __PS4_CONNECT_ESP_H
-#define __PS4_CONNECT_ESP_H
+#ifndef __PS4_Connect_ESP_H
+#define __PS4_Connect_ESP_H
 #include "stm32f4xx_hal.h"
 #include "stm32f4xx_hal_uart.h"
 #include <string.h>

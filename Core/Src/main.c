@@ -19,6 +19,10 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "PS4_Connect_ESP.h"
+#include "Omni_4_Kinematic.h"
+#include "PID.h"
+#include "DRIVER_PID_AML.h"
+
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "stm32f4xx_hal.h"
@@ -42,7 +46,8 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
+PID_TypeDef Omega_PID;
+Omni_Kinematic OmniRobot;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/

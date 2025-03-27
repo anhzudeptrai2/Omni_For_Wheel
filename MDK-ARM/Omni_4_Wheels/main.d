@@ -33,3 +33,7 @@ omni_4_wheels\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 omni_4_wheels\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 omni_4_wheels\main.o: ../Core/Inc/PS4_Connect_ESP.h
 omni_4_wheels\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+omni_4_wheels\main.o: ../Core/Inc/Omni_4_Kinematic.h
+omni_4_wheels\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+omni_4_wheels\main.o: ../Core/Inc/PID.h
+omni_4_wheels\main.o: ../Core/Inc/DRIVER_PID_AML.h

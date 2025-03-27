@@ -1,4 +1,4 @@
-omni_4_wheels\stm32f4xx_hal_uart.o: ..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.c
+omni_4_wheels\stm32f4xx_hal_uart.o: ..\..\..\Downloads\AML_OMNI_3W_F407-master\AML_OMNI_3W_F407-master\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.c
 omni_4_wheels\stm32f4xx_hal_uart.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 omni_4_wheels\stm32f4xx_hal_uart.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_conf.h
 omni_4_wheels\stm32f4xx_hal_uart.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h

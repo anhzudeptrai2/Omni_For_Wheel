@@ -409,9 +409,39 @@
               <FilePath>../Core/Src/stm32f4xx_hal_msp.c</FilePath>
             </File>
             <File>
-              <FileName>PS4_Connec_ESP.c</FileName>
+              <FileName>DRIVER_PID_AML.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Core\Src\PS4_Connec_ESP.c</FilePath>
+              <FilePath>..\Core\Src\DRIVER_PID_AML.c</FilePath>
+            </File>
+            <File>
+              <FileName>DRIVER_PID_AML.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Core\Inc\DRIVER_PID_AML.h</FilePath>
+            </File>
+            <File>
+              <FileName>Omni_4_Kinematic.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\Omni_4_Kinematic.c</FilePath>
+            </File>
+            <File>
+              <FileName>Omni_4_Kinematic.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Core\Inc\Omni_4_Kinematic.h</FilePath>
+            </File>
+            <File>
+              <FileName>PID.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\PID.c</FilePath>
+            </File>
+            <File>
+              <FileName>PID.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Core\Inc\PID.h</FilePath>
+            </File>
+            <File>
+              <FileName>PS4_Connect_ESP.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\PS4_Connect_ESP.c</FilePath>
             </File>
             <File>
               <FileName>PS4_Connect_ESP.h</FileName>
@@ -491,7 +521,7 @@
             <File>
               <FileName>stm32f4xx_hal_uart.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.c</FilePath>
+              <FilePath>..\..\..\Downloads\AML_OMNI_3W_F407-master\AML_OMNI_3W_F407-master\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.c</FilePath>
             </File>
           </Files>
         </Group>
