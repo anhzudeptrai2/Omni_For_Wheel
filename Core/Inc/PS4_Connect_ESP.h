@@ -2,9 +2,9 @@
 #define __PS4_CONNECT_ESP_H
 #include "stm32f4xx_hal.h"
 #include "stm32f4xx_hal_uart.h"
-#include "stm32f4xx_hal.h"
 #include <string.h>
 #include <stdint.h>
+
 #pragma pack(push, 1)
 typedef struct
 {

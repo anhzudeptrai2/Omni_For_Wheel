@@ -1,4 +1,10 @@
 #include "PS4_Connect_ESP.h"
+
+// Fix undefined symbol error caused by extern variables declared in the header file.
+// Define the extern variables here.
+PS4_DATA PS4_Dat;
+volatile BS Button_State;
+
 UART_HandleTypeDef *huart_ps4;
 
 uint8_t rx_buffer[sizeof(PS4_Dat)];
