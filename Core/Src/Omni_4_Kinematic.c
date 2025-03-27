@@ -96,4 +96,50 @@ void OmniRobot_Calculate_WheelSpeeds(Omni_Kinematic *robot, float *temp1_in, flo
     *temp4_in = Rads_to_RPM(temp4);
 }
 
+void OmniRobot_Field_Control(Omni_Kinematic *robot, PS4_DATA *ps4_joy, float imu_theta, uint8_t neg_heading )
+{
+    robot-> IMU_Theta = imu_theta;
+    joystick.X_Axis = -ps4_joy->l_stick_x;
+    joystick.Y_Axis = -ps4_joy->l_stick_y;
+    joystick.Z_Axis = ps4_joy->r_stick_x;
 
+    Joystick_To_Velocites(robot, robot->Max_Speed, robot->Max_Omega);
+
+    if (neg_heading) /*Negative heading or positive heading*/
+    {
+        robot->Theta = (180 + imu_theta) * (PI / 180.0f);
+    }
+    else
+    {
+        robot->Theta = imu_theta * (PI / 180.0f);
+    }
+
+    if (robot->Theta > 2 * PI)
+    {
+        robot->Theta -= 2 * PI;
+    }
+    else if (robot->Theta < 0)
+    {
+        robot->Theta += 2 * PI;
+    }
+
+    OmniRobot_Calculate_WheelSpeeds(robot, &robot->temp[0], &robot->temp[1], &robot->temp[2], &robot->temp[3]);
+}
+
+int16_t Round_Float(float num)
+{
+    return (int16_t)(num >= 0 ? num + 0.5 : num - 0.5);
+}
+
+void Find_Closet_Angle(int16_t current_angle, int16_t *closest_angles)
+{
+    int16_t target_angles[] = {90, -90, 180, -180};
+
+    for (uint8_t i = 0; i < 4; i++)
+    {
+
+
+        
+        closest_angles[i] = target_angles[i] + 360.0f * roundf((current_angle - target_angles[i]) / 360.0f);
+    }
+}
