@@ -46,24 +46,27 @@ void Joystick_To_Velocites(Omni_Kinematic *robot, float max_speed, float max_ome
     float mapped_x = (joystick.X_Axis) / 127.0f;
     float mapped_y = (joystick.Y_Axis) / 127.0f;
     float mapped_z = (joystick.Z_Axis) / 127.0f;
-	
-    if (fabs(mapped_x) < Dead_Zone_X_Axis)
-    {
-        mapped_x = 0.0f;
-    }
-    else
-    {
-        robot->Vx = mapped_x * max_speed;
-    }
 
-    if (fabs(mapped_y) < Dead_Zone_Y_Axis)
-    {
-        mapped_y = 0.0f;
-    }
-    else
-    {
-        robot->Vy = mapped_y * max_speed;
-    }
+    robot->Vx = (fabs(mapped_x) > Dead_Zone_X_Axis) ? mapped_x * max_speed : 0.0f;
+    robot->Vy = (fabs(mapped_y) > Dead_Zone_Y_Axis) ? mapped_y * max_speed : 0.0f;
+
+    // if (fabs(mapped_x) < Dead_Zone_X_Axis)
+    // {
+    //     mapped_x = 0.0f;
+    // }
+    // else
+    // {
+    //     robot->Vx = mapped_x * max_speed;
+    // }
+
+    // if (fabs(mapped_y) < Dead_Zone_Y_Axis)
+    // {
+    //     mapped_y = 0.0f;
+    // }
+    // else
+    // {
+    //     robot->Vy = mapped_y * max_speed;
+    // }
 
     /* Check control mode field control or fixed yaw angle control */
     if (robot->Is_Yaw_Fix)
@@ -137,9 +140,6 @@ void Find_Closet_Angle(int16_t current_angle, int16_t *closest_angles)
 
     for (uint8_t i = 0; i < 4; i++)
     {
-
-
-        
         closest_angles[i] = target_angles[i] + 360.0f * roundf((current_angle - target_angles[i]) / 360.0f);
     }
 }

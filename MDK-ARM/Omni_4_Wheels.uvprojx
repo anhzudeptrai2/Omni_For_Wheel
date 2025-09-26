@@ -448,6 +448,16 @@
               <FileType>5</FileType>
               <FilePath>..\Core\Inc\PS4_Connect_ESP.h</FilePath>
             </File>
+            <File>
+              <FileName>IMU.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\IMU.c</FilePath>
+            </File>
+            <File>
+              <FileName>IMU.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Core\Inc\IMU.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

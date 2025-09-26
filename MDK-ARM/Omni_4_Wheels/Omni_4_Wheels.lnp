@@ -7,6 +7,7 @@
 "omni_4_wheels\omni_4_kinematic.o"
 "omni_4_wheels\pid.o"
 "omni_4_wheels\ps4_connect_esp.o"
+"omni_4_wheels\imu.o"
 "omni_4_wheels\stm32f4xx_hal_rcc.o"
 "omni_4_wheels\stm32f4xx_hal_rcc_ex.o"
 "omni_4_wheels\stm32f4xx_hal_flash.o"
